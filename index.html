@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scrolling Marquee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="page">
+        <header class="heading">
+            <h1>Infinite Scrolling Marquee</h1>
+            <p>Hover the banner to pause it.</p>
+        </header>
+
+        <section class="marquee" aria-label="Technology names">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <span class="marquee-item">CSS</span>
+                    <span class="marquee-item">JavaScript</span>
+                    <span class="marquee-item">Git</span>
+                    <span class="marquee-item">GitHub</span>
+                    <span class="marquee-item">VS Code</span>
+                    <span class="marquee-item">HTML</span>
+                </div>
+
+                <!-- Duplicate group for seamless looping -->
+                <div class="marquee-group" aria-hidden="true">
+                    <span class="marquee-item">CSS</span>
+                    <span class="marquee-item">JavaScript</span>
+                    <span class="marquee-item">Git</span>
+                    <span class="marquee-item">GitHub</span>
+                    <span class="marquee-item">VS Code</span>
+                    <span class="marquee-item">HTML</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

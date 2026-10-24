@@ -1,0 +1,104 @@
+
+/* Reset default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0eff5;
+    color: #252b38;
+}
+
+/* Main page layout */
+.page {
+    width: min(100% - 40px, 900px);
+    margin: 0 auto;
+    padding-top: 36px;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.heading h1 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.heading p {
+    font-size: 13px;
+    color: #737b8a;
+}
+
+/* Marquee banner */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background-color: #202938;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 15px 0;
+}
+
+/* Moving track */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 18s linear infinite;
+}
+
+/* Pause when the pointer is over the banner */
+.marquee:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* Each group has identical content */
+.marquee-group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 0;
+}
+
+/* Individual technology labels */
+.marquee-item {
+    flex: 0 0 120px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Move exactly one group's width */
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .page {
+        width: calc(100% - 24px);
+        padding-top: 28px;
+    }
+
+    .heading h1 {
+        font-size: 20px;
+    }
+
+    .marquee-item {
+        flex-basis: 100px;
+        font-size: 12px;
+    }
+}
+
